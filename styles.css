@@ -1,0 +1,28 @@
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: calc(100% - 25px);
+	margin: 0;
+	padding: 0;
+}
+#map {
+	height: 70%;
+	width: 80%;
+	margin: 50px auto;
+	border: 2px solid black;
+}
+
+.buttons {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+}
+
+.text {
+	width: 50%;
+	text-align: right;
+	margin: 5px;
+}
