@@ -1,19 +1,33 @@
 {
-  "name": "maps.js-v2",
-  "version": "1.0.0",
-  "description": "A library that simplifies various operations in Google Maps.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Martiiii/maps.js-v2.git"
-  },
-  "author": "Marti Mutso, Karl-Martin Uiga",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Martiiii/maps.js-v2/issues"
-  },
-  "homepage": "https://github.com/Martiiii/maps.js-v2#readme"
+	"name": "maps.js-v2",
+	"version": "1.0.0",
+	"description": "A library that simplifies various operations in Google Maps.",
+	"main": "index.js",
+	"babel": {
+		"presets": [
+			"env"
+		],
+		"plugins": [
+			"transform-class-properties"
+		]
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "babel src -d lib"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Martiiii/maps.js-v2.git"
+	},
+	"author": "Marti Mutso, Karl-Martin Uiga",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Martiiii/maps.js-v2/issues"
+	},
+	"homepage": "https://github.com/Martiiii/maps.js-v2#readme",
+	"devDependencies": {
+		"babel-cli": "^6.26.0",
+		"babel-plugin-transform-class-properties": "^6.24.1",
+		"babel-preset-env": "^1.7.0"
+	}
 }

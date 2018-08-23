@@ -7,10 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Maps.js</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="lib/maps.js"></script>
 </head>
 
 <body>
-    <div id="map"></div>
+    <div class="map" id="map"></div>
+    <div class="map" id="map2"></div>
     <div class="buttons">
         <span class="text">Add a new area</span>
         <button class="btn">Click me</button>
@@ -21,17 +23,12 @@
         <span class="text">Delete areas</span>
         <button class="btn">Click me</button>
     </div>
+
+
     <script>
-        let map;
-        window.initMap = () => {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: -35, lng: 150 },
-                zoom: 8
-            });
-        }
+        const map1 = new maps.GMap("AIzaSyAxzRNiTQpXhXohl4MpAg-IYVZQyknyla4", "map");
+        const map2 = new maps.GMap("AIzaSyAxzRNiTQpXhXohl4MpAg-IYVZQyknyla4", "map2");
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxzRNiTQpXhXohl4MpAg-IYVZQyknyla4&callback=initMap" async
-        defer></script>
 </body>
 
 </html>
