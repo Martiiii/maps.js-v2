@@ -3,7 +3,9 @@ const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-	entry: ['./lib/index.js'],
+	entry: {
+		app: './lib/index.js'
+	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		publicPath: '/dist/',
