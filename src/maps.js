@@ -1,19 +1,19 @@
 const maps = {};
 maps.mapsList = [];
 
+window.maps = maps; // Check if a better alternative exists
+
 maps.initMaps = () => {
 	maps.mapsList.forEach((map) => {
 		map.initialize();
 	});
 };
 
-window.initMaps = maps.initMaps;
-
 maps.GMap = class GMap {
 	constructor(apiKey, mapDivId) {
 		if (maps.mapsList.length === 0) {
 			const script = document.createElement('script');
-			script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=geometry&callback=initMaps`;
+			script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=geometry&callback=maps.initMaps`;
 			script.defer = true;
 			script.async = true;
 			document.getElementsByTagName('head')[0].appendChild(script);
