@@ -12,7 +12,7 @@ module.exports = {
 		filename: 'maps.js'
 	},
 	plugins: [
-		new CleanWebpackPlugin(['dist/*'], { exclude: ['maps.js'] }),
+		new CleanWebpackPlugin(['dist/*']),
 		new webpack.HotModuleReplacementPlugin()
 	],
 	watch: true,
