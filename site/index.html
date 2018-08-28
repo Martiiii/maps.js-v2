@@ -22,12 +22,22 @@
 
     <span class="text">Delete areas</span>
     <button class="btn">Click me</button>
+
+    <span class="text">Import single shapefile</span>
+    <button class="btn" onclick="map1.importShapefile('files/pandr')">Click me</button>
+    <!--This way not working atm, seems like a bug with the package, wants .cpg file but it is actually optional-->
+
+    <span class="text">Import .zip containing single shapefile</span>
+    <button class="btn" onclick="map1.importShapefile('files/pandr.zip')">Click me</button>
+
+    <span class="text">Import .zip containing multiple shapefiles</span>
+    <button class="btn" onclick="map1.importShapefile('files/pandr_multi.zip')">Click me</button>
   </div>
 
 
   <script>
     const map1 = new maps.GMap("AIzaSyAxzRNiTQpXhXohl4MpAg-IYVZQyknyla4", "map", {});
-    const map2 = new maps.GMap("AIzaSyAxzRNiTQpXhXohl4MpAg-IYVZQyknyla4", "map2", {"mapType": "hybrid"});
+    const map2 = new maps.GMap("AIzaSyAxzRNiTQpXhXohl4MpAg-IYVZQyknyla4", "map2", { "mapType": "hybrid" });
   </script>
 </body>
 
